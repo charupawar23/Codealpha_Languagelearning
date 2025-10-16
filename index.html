@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LinguaSpark — Language Learning</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>LinguaSpark</h1>
+      <div class="controls">
+        <select id="languageSelect">
+          <option value="es">Spanish</option>
+          <option value="fr">French</option>
+          <option value="de">German</option>
+        </select>
+        <button id="dailyBtn">Today's Lesson</button>
+        <button id="progressBtn">Progress</button>
+      </div>
+    </header>
+
+    <main>
+      <aside class="sidebar">
+        <h3>Categories</h3>
+        <ul id="categories"></ul>
+      </aside>
+
+      <section class="content">
+        <div id="flashcardArea" class="panel">
+          <h2 id="lessonTitle">Flashcards</h2>
+          <div id="flashcard" class="flashcard">
+            <div class="front" id="frontText">Hola</div>
+            <div class="back" id="backText">Hello</div>
+          </div>
+          <div class="flashcard-controls">
+            <button id="prevCard">◀ Prev</button>
+            <button id="flipCard">Flip</button>
+            <button id="nextCard">Next ▶</button>
+            <button id="speakBtn">🔊 Pronounce</button>
+            <button id="markKnown">Mark Known</button>
+          </div>
+        </div>
+
+        <div id="quizArea" class="panel hidden">
+          <h2>Quiz</h2>
+          <div id="quizQuestion"></div>
+          <div id="quizChoices"></div>
+          <div class="quiz-controls">
+            <button id="startQuiz">Start Quiz</button>
+            <button id="nextQuestion" class="hidden">Next</button>
+            <div id="quizResult" class="result"></div>
+          </div>
+        </div>
+
+        <div id="dailyArea" class="panel hidden">
+          <h2>Today's Lesson</h2>
+          <div id="dailyList"></div>
+          <button id="startPractice">Practice Lesson</button>
+        </div>
+
+        <div id="progressArea" class="panel hidden">
+          <h2>Progress</h2>
+          <div id="progressStats"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <small>Local-only demo. Optional Firebase sync in README.</small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+:root{
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --accent:#3b82f6;
+  --muted:#6b7280;
+}
+*{box-sizing:border-box}
+body{font-family:Segoe UI, Roboto, Arial, sans-serif;background:var(--bg);margin:0;color:#111}
+.app{max-width:1000px;margin:24px auto;padding:16px}
+header{display:flex;justify-content:space-between;align-items:center}
+header h1{margin:0}
+.controls select, .controls button{margin-left:8px;padding:6px 10px;border-radius:6px;border:1px solid #ddd}
+main{display:flex;margin-top:16px}
+.sidebar{width:180px}
+.sidebar h3{margin-top:0}
+.sidebar ul{list-style:none;padding:0}
+.sidebar li{padding:6px;border-radius:6px;cursor:pointer}
+.sidebar li:hover{background:#fff}
+.content{flex:1;padding-left:16px}
+.panel{background:var(--card);padding:16px;border-radius:8px;box-shadow:0 1px 4px rgba(2,6,23,0.06)}
+.hidden{display:none}
+.flashcard{height:140px;border-radius:8px;background:linear-gradient(180deg,#fff,#f8fafc);display:flex;align-items:center;justify-content:center;font-size:28px;margin:12px 0;position:relative;padding:12px}
+.flashcard .back{display:none}
+.flashcard.flipped .front{display:none}
+.flashcard.flipped .back{display:block}
+.flashcard-controls button{margin-right:8px}
+.quiz-controls{margin-top:12px}
+#quizChoices button{display:block;margin:6px 0;padding:8px;border-radius:6px;border:1px solid #ddd;background:#fff}
+.result{margin-top:8px}
+footer{margin-top:12px;color:var(--muted)}
